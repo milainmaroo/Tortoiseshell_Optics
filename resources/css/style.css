@@ -11,6 +11,7 @@ html {
 /* Company Header */
 .main-banner-image {
   height: 30rem;
+  padding-top: 1rem;
   background-image: url("../images/main-banner.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -44,7 +45,7 @@ li {
 }
 
 /* Main Banner */
-.main-banner{
+.main-banner {
   display: flex;
   justify-content: flex-end;
   margin-top: 10rem;
@@ -56,33 +57,108 @@ li {
   line-height: 1.2;
   background-color: white;
   padding: 1.5rem 5rem;
+  margin-right: -2rem;
+}
+
+.second-menu {
+  display: none;
+}
+
+/* Media Queries max-width: 1024px */
+@media only screen and (max-width: 1024px) {
+  .main-banner-image {
+    height: 22rem;
+    padding-top: 0;
+  }
+
+  .main-banner-title {
+    padding: 0.75rem 4rem;
+    margin-right: 2rem;
+  }
+
+  .main-banner {
+    margin-top: 5rem;
+  }
+
+  .main-banner-title h1 {
+    font-size: 1.33rem;
+  }
+
+  .container {
+      max-width: 100%;
+ }
+}
+
+/* Media Queries max-width: 470px */
+@media only screen and (max-width: 470px) {
+  .main-banner-image {
+    height: 17rem;
+    background-position: 20%;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .second-menu {
+    display: block;
+  }
+
+  .main-banner {
+    margin-top: 9rem;
+  }
+
+  .main-banner-title {
+    padding: 1rem 0;
+    width: 100%;
+    margin: auto;
+  }
+
+  .main-banner-title h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 /* Customer Service */
+.customer-service {
+  display: flex;
+  justify-content: center;
+}
 
 .services {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 5rem;
+  height: 8rem;
   margin: 3rem;
+  text-align: center;
 }
-
 
 .services img {
-  display: block;
+  width: 5rem;
+  margin-bottom: 1rem;
 }
 
-.paper-image img {
+.services img.paper-icon {
   width: 3.5rem;
 }
 
-.ruler-image img {
-  width: 5rem;
-  margin-right: 6rem;
-}
+/* Media Queries max-width: 470px */
+@media only screen and (max-width: 470px) {
+  .services {
+    margin: 3.77rem;
+    font-size: 0.77rem;
+    height: auto;
+  }
 
-.truck-image img {
-  width: 5rem;
+  .customer-service {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 /* Business Info */
@@ -107,6 +183,28 @@ li {
   line-height: 1.4;
 }
 
+/* Media Queries max-width: 470px */
+@media only screen and (max-width: 470px) {
+  .business-info {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .info .title {
+    width: 100%;
+  }
+
+  .info span {
+    padding: 1rem;
+    font-size: 0.77rem;
+  }
+}
+
 
 /* Footer */
 .copyright {
@@ -121,3 +219,14 @@ li {
   height: 1.5rem;
   padding-right: 1rem;
 }
+
+/* Media Queries max-width: 470px */
+@media only screen and (max-width: 470px) {
+  .copyright {
+    justify-content: center;
+  }
+
+  .copyright span {
+    display: none;
+  }
+  }
